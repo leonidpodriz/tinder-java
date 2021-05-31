@@ -15,74 +15,32 @@
                         <div class="table-container">
                             <table class="table-users table" border="0">
                                 <tbody>
-                                <tr>
-                                    <td width="10">
-                                        <div class="avatar-img">
-                                            <img class="img-circle"
-                                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhcCYW4QDWMOjOuUTxOd50KcJvK-rop9qE9zRltSbVS_bO-cfWA"/>
-                                        </div>
-                                    </td>
-                                    <td class="align-middle">
-                                        Herbert Hoover
-                                    </td>
-                                    <td class="align-middle">
-                                        Builder Sales Agent
-                                    </td>
-                                    <td class="align-middle">
-                                        Last Login: 6/10/2017<br><small class="text-muted">5 days ago</small>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="10">
-                                        <div class="avatar-img">
-                                            <img class="img-circle"
-                                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhcCYW4QDWMOjOuUTxOd50KcJvK-rop9qE9zRltSbVS_bO-cfWA"/>
-                                        </div>
-                                    </td>
-                                    <td class="align-middle">
-                                        Herbert Hoover
-                                    </td>
-                                    <td class="align-middle">
-                                        Builder Sales Agent
-                                    </td>
-                                    <td class="align-middle">
-                                        Last Login: 6/10/2017<br><small class="text-muted">5 days ago</small>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="10">
-                                        <div class="avatar-img">
-                                            <img class="img-circle"
-                                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhcCYW4QDWMOjOuUTxOd50KcJvK-rop9qE9zRltSbVS_bO-cfWA"/>
-                                        </div>
-                                    </td>
-                                    <td class="align-middle">
-                                        Herbert Hoover
-                                    </td>
-                                    <td class="align-middle">
-                                        Builder Sales Agent
-                                    </td>
-                                    <td class="align-middle">
-                                        Last Login: 6/10/2017<br><small class="text-muted">5 days ago</small>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="10">
-                                        <div class="avatar-img">
-                                            <img class="img-circle"
-                                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxhcCYW4QDWMOjOuUTxOd50KcJvK-rop9qE9zRltSbVS_bO-cfWA"/>
-                                        </div>
-                                    </td>
-                                    <td class="align-middle">
-                                        Herbert Hoover
-                                    </td>
-                                    <td class="align-middle">
-                                        Builder Sales Agent
-                                    </td>
-                                    <td class="align-middle">
-                                        Last Login: 6/10/2017<br><small class="text-muted">5 days ago</small>
-                                    </td>
-                                </tr>
+                                <#list users as user>
+                                    <tr>
+                                        <td width="10">
+                                            <a href="/messages/?id=${user.ID}">
+                                                <div class="avatar-img">
+                                                    <img class="img-circle"
+                                                         src="${user.AVATAR_URI}" alt="avatar">
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td class="align-middle">
+                                            <a style="color: inherit; text-decoration: none;" class=".stretched-link"
+                                               href="/chat/?id=${user.ID}">
+                                                ${user.NAME}
+                                            </a>
+                                        </td>
+                                        <td class="align-middle">
+                                            Builder Sales Agent
+                                        </td>
+                                        <td class="align-middle">
+                                            Last Login: 6/10/2017<br><small class="text-muted">5 days ago</small>
+                                        </td>
+                                    </tr>
+                                <#else>
+                                    <p>No users</p>
+                                </#list>
                                 </tbody>
                             </table>
                         </div>
