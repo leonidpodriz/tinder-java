@@ -1,3 +1,6 @@
+package Servlets;
+
+import TemplateUtils.TemplateConfiguration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 
@@ -18,6 +21,7 @@ abstract public class BaseServlet extends HttpServlet {
             getTemplate().process(context, httpServletResponse.getWriter());
             return true;
         } catch (TemplateException e) {
+            System.out.println(e.getMessage());
             httpServletResponse.sendError(500);
             return false;
         }

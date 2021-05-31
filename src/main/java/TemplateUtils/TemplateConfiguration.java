@@ -1,3 +1,5 @@
+package TemplateUtils;
+
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateExceptionHandler;
@@ -21,7 +23,7 @@ public class TemplateConfiguration {
         }};
     }
 
-    static public Configuration getTemplateConfiguration() throws IOException {
+    public static  Configuration getTemplateConfiguration() throws IOException {
         if (configuration == null) {
             configuration = getConfiguration();
         }
@@ -30,7 +32,7 @@ public class TemplateConfiguration {
     }
 
 
-    static Template getTemplate(String templateName) throws IOException {
+    public static Template getTemplate(String templateName) throws IOException {
         return getTemplateConfiguration().getTemplate(templateName);
     }
 }

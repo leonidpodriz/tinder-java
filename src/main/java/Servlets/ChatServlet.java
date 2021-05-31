@@ -1,11 +1,13 @@
+package Servlets;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class UsersServlet extends BaseServlet {
+public class ChatServlet extends BaseServlet {
     @Override
     public String getTemplateName() {
-        return "homepage.ftl";
+        return "chat.ftl";
     }
 
     @Override
