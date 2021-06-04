@@ -1,11 +1,9 @@
 import DB.DbProp;
 import DB.DbSchema;
-import Servlets.ChatServlet;
-import Servlets.UsersServlet;
-import Servlets.LoginServlet;
-import Servlets.LikedServlet;
+import Servlets.*;
 import Users.UserService;
 import Utils.CookieFilter;
+import Utils.HerokuEnv;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -18,6 +16,8 @@ public class WebServer {
     public static void main(String[] args) throws Exception {
         UserService userService = new UserService();
         ServletContextHandler handler = new ServletContextHandler();
+
+        handler.addServlet(RedirectServlet.class, "/");
         handler.addServlet(new ServletHolder(new LikedServlet(userService)), "/liked");
         handler.addServlet(new ServletHolder(new LoginServlet(userService)), "/login");
         handler.addServlet(new ServletHolder(new UsersServlet(userService)), "/users");
@@ -27,6 +27,9 @@ public class WebServer {
         handler.addFilter(new FilterHolder(new CookieFilter(userService)), "/liked",EnumSet.of(DispatcherType.REQUEST));
         handler.addFilter(new FilterHolder(new CookieFilter(userService)), "/messages/",EnumSet.of(DispatcherType.REQUEST));
 
+        int PORT = System.getenv("TYPE") != null && System.getenv("TYPE").equals("PROD") ? HerokuEnv.port() : 8080;
+        Server server = new Server(PORT);
+
         new DbSchema(
                 DbProp.conn,
                 DbProp.user,
@@ -34,7 +37,6 @@ public class WebServer {
         ).migrate();
 
 
-        Server server = new Server(8080);
         server.setHandler(handler);
         server.start();
         server.join();
