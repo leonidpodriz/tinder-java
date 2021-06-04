@@ -16,13 +16,11 @@ public class WebServer {
     public static void main(String[] args) throws Exception {
         UserService userService = new UserService();
         ServletContextHandler handler = new ServletContextHandler();
-
         handler.addServlet(RedirectServlet.class, "/");
         handler.addServlet(new ServletHolder(new LikedServlet(userService)), "/liked");
         handler.addServlet(new ServletHolder(new LoginServlet(userService)), "/login");
         handler.addServlet(new ServletHolder(new UsersServlet(userService)), "/users");
         handler.addServlet(new ServletHolder(new ChatServlet(userService)), "/chat/");
-
         handler.addFilter(new FilterHolder(new CookieFilter(userService)), "/users", EnumSet.of(DispatcherType.REQUEST));
         handler.addFilter(new FilterHolder(new CookieFilter(userService)), "/liked",EnumSet.of(DispatcherType.REQUEST));
         handler.addFilter(new FilterHolder(new CookieFilter(userService)), "/messages/",EnumSet.of(DispatcherType.REQUEST));
