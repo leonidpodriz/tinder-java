@@ -1,6 +1,6 @@
-package Servlets;
+package Tinder.Servlets;
 
-import TemplateUtils.TemplateConfiguration;
+import Tinder.TemplateUtils.TemplateConfiguration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 

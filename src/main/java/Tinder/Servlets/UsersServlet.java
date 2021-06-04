@@ -1,8 +1,8 @@
-package Servlets;
+package Tinder.Servlets;
 
-import Users.User;
-import Users.UserService;
-import Utils.CookieHelper;
+import Tinder.Users.User;
+import Tinder.Users.UserService;
+import Tinder.Utils.CookieHelper;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;

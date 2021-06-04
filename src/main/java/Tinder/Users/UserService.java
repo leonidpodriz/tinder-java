@@ -1,7 +1,7 @@
-package Users;
+package Tinder.Users;
 
-import DB.DBCPDataSource;
-import DB.Statements;
+import Tinder.DB.DBCPDataSource;
+import Tinder.DB.Statements;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

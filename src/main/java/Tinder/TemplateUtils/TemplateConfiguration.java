@@ -1,4 +1,4 @@
-package TemplateUtils;
+package Tinder.TemplateUtils;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;

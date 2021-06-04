@@ -1,4 +1,4 @@
-package Messages;
+package Tinder.Messages;
 
 public class Messages {
     public final boolean ISOWN;

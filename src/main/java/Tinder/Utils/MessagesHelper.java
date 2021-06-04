@@ -1,7 +1,7 @@
-package Utils;
+package Tinder.Utils;
 
-import DB.DBCPDataSource;
-import Messages.Messages;
+import Tinder.DB.DBCPDataSource;
+import Tinder.Messages.Messages;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,9 +1,11 @@
-import DB.DbProp;
-import DB.DbSchema;
-import Servlets.*;
-import Users.UserService;
-import Utils.CookieFilter;
-import Utils.HerokuEnv;
+package Tinder;
+
+import Tinder.DB.DbProp;
+import Tinder.DB.DbSchema;
+import Tinder.Servlets.*;
+import Tinder.Users.UserService;
+import Tinder.Utils.CookieFilter;
+import Tinder.Utils.HerokuEnv;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;

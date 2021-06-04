@@ -1,4 +1,4 @@
-package Utils;
+package Tinder.Utils;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

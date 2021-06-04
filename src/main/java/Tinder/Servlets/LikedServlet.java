@@ -1,16 +1,14 @@
-package Servlets;
+package Tinder.Servlets;
 
-import Users.UserService;
-import Utils.CookieHelper;
+import Tinder.Users.UserService;
+import Tinder.Utils.CookieHelper;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
 public class LikedServlet extends BaseServlet {
     private final UserService userService;

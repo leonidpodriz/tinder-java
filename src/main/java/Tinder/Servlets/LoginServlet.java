@@ -1,7 +1,7 @@
-package Servlets;
+package Tinder.Servlets;
 
-import Users.User;
-import Users.UserService;
+import Tinder.Users.User;
+import Tinder.Users.UserService;
 import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.ServletException;

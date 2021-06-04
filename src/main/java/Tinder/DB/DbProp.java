@@ -1,6 +1,6 @@
-package DB;
+package Tinder.DB;
 
-import Utils.HerokuEnv;
+import Tinder.Utils.HerokuEnv;
 
 
 public class DbProp {

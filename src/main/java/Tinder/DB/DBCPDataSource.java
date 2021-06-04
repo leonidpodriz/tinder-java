@@ -1,4 +1,4 @@
-package DB;
+package Tinder.DB;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 

@@ -1,4 +1,4 @@
-package Servlets;
+package Tinder.Servlets;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

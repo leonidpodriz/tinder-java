@@ -1,6 +1,6 @@
-package Utils;
+package Tinder.Utils;
 
-import Users.UserService;
+import Tinder.Users.UserService;
 
 import javax.servlet.*;
 import javax.servlet.http.Cookie;

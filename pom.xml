@@ -24,7 +24,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>WebServer</mainClass>
+                            <mainClass>Tinder.WebServer</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

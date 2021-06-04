@@ -1,4 +1,4 @@
-package Users;
+package Tinder.Users;
 
 import java.util.Objects;
 
